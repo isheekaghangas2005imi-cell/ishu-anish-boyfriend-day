@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishu ♡ Anish — Our Little Love Story</title>
+<meta name="description" content="A tiny love story made by Ishu for Anish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#ff6f9f; --rose:#f43f73; --soft:#fff1f6; --cream:#fffafc;
+  --ink:#3d2630; --muted:#805d69; --white:#fff;
+  --shadow:0 20px 60px rgba(178,65,103,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#fff8fb 0%,#fff 45%,#fff5f9 100%);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:#ffc0d3;color:#4a1f2e}
+
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.heart{position:absolute;bottom:-30px;font-size:18px;animation:floatUp linear forwards;opacity:.65}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:40;
+  width:min(92%,900px);padding:11px 15px;border:1px solid rgba(255,111,159,.18);
+  border-radius:999px;background:rgba(255,255,255,.78);backdrop-filter:blur(16px);
+  display:flex;align-items:center;justify-content:space-between;box-shadow:0 10px 35px rgba(100,30,60,.08)}
+.logo{font-family:Caveat,cursive;font-size:25px;font-weight:700;color:var(--rose)}
+.navlinks{display:flex;gap:4px}
+.navlinks a{font-size:12px;font-weight:700;padding:8px 11px;border-radius:999px;color:#754b59}
+.navlinks a:hover{background:var(--soft);color:var(--rose)}
+@media(max-width:650px){.navlinks a{display:none}.navlinks a:last-child{display:block}.logo{font-size:23px}}
+
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 20px 70px;position:relative}
+.hero-inner{width:min(1100px,100%);display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr;gap:35px}.hero-copy{text-align:center}}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#fff0f5;color:var(--rose);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:"Playfair Display",serif;font-size:clamp(48px,7vw,84px);line-height:.96;margin:20px 0 18px;letter-spacing:-.045em}
+h1 span{color:var(--rose)}
+.hero-copy p{font-size:18px;line-height:1.75;color:var(--muted);max-width:560px;margin:0 0 28px}
+.script{font-family:Caveat,cursive;font-size:32px;color:var(--rose)}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:0;border-radius:999px;padding:13px 20px;font-weight:800;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:linear-gradient(135deg,#ff5f94,#f33e74);color:#fff;box-shadow:0 12px 28px rgba(243,62,116,.25)}
+.btn-secondary{background:#fff;border:1px solid #ffd3df;color:#8a5264}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(160,55,90,.16)}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:34px;box-shadow:var(--shadow);transform:rotate(1.5deg)}
+.hero-photo:before{content:"";position:absolute;inset:-15px 18px 22px -15px;border:2px dashed #ffb2c8;border-radius:35px;transform:rotate(-4deg);z-index:-1}
+.sticker{position:absolute;right:-14px;bottom:25px;background:#fff;padding:14px 17px;border-radius:20px;box-shadow:0 12px 35px rgba(100,30,60,.13);font-family:Caveat,cursive;font-size:25px;transform:rotate(5deg)}
+.sticker small{display:block;font-family:DM Sans;font-size:10px;color:#a36c7b;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+
+section{padding:100px 20px}
+.section-inner{width:min(1100px,100%);margin:auto}
+.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose);font-weight:900}
+h2{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,56px);margin:10px 0 14px}
+.section-intro{color:var(--muted);max-width:650px;line-height:1.75}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
+.stat{background:#fff;border:1px solid #ffe0e8;border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(140,50,80,.06);text-align:center}
+.stat strong{display:block;font-family:Caveat,cursive;font-size:39px;color:var(--rose)}
+.stat span{font-size:12px;color:var(--muted);font-weight:700}
+@media(max-width:600px){.stats{grid-template-columns:1fr}}
+
+.timeline{position:relative;margin-top:55px}
+.timeline:before{content:"";position:absolute;left:25px;top:0;bottom:0;width:2px;background:linear-gradient(#ffc2d3,#ff6f9f,#ffc2d3)}
+.t-item{position:relative;padding-left:72px;margin-bottom:38px}
+.t-dot{position:absolute;left:11px;top:4px;width:30px;height:30px;border-radius:50%;background:#fff;border:7px solid #ffb5ca;box-shadow:0 0 0 5px #fff}
+.t-card{background:#fff;border:1px solid #ffe0e8;border-radius:24px;padding:23px 25px;box-shadow:0 12px 35px rgba(140,50,80,.07)}
+.t-date{color:var(--rose);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.t-card h3{font-family:"Playfair Display",serif;font-size:25px;margin:7px 0}
+.t-card p{color:var(--muted);line-height:1.7;margin:0}
+
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:40px}
+.g{overflow:hidden;border-radius:23px;background:#eee;box-shadow:0 12px 30px rgba(80,30,50,.08);cursor:pointer;position:relative}
+.g img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}
+.g:hover img{transform:scale(1.05)}
+.g:nth-child(1){grid-column:span 7;height:430px}
+.g:nth-child(2){grid-column:span 5;height:430px}
+.g:nth-child(3){grid-column:span 4;height:330px}
+.g:nth-child(4){grid-column:span 4;height:330px}
+.g:nth-child(5){grid-column:span 4;height:330px}
+.g:nth-child(6){grid-column:span 7;height:430px}
+.g:nth-child(7){grid-column:span 5;height:430px}
+.g:nth-child(n+8){grid-column:span 4;height:330px}
+@media(max-width:700px){.gallery{display:grid;grid-template-columns:1fr 1fr}.g,.g:nth-child(n){grid-column:span 1!important;height:260px}.g:first-child{grid-column:span 2!important;height:360px}}
+
+.polaroids{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:45px}
+.polaroid{background:#fff;padding:11px 11px 24px;box-shadow:0 15px 40px rgba(90,30,55,.11);transition:.25s}
+.polaroid:nth-child(1){transform:rotate(-3deg)}.polaroid:nth-child(2){transform:rotate(2deg)}.polaroid:nth-child(3){transform:rotate(-1deg)}
+.polaroid:hover{transform:translateY(-7px) rotate(0)}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.polaroid p{font-family:Caveat,cursive;font-size:24px;margin:9px 4px 0;text-align:center;color:#704351}
+@media(max-width:700px){.polaroids{grid-template-columns:1fr}}
+
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:40px}
+.reason{padding:26px;background:linear-gradient(145deg,#fff,#fff2f6);border:1px solid #ffdce7;border-radius:25px;min-height:170px}
+.reason .emoji{font-size:30px}.reason h3{font-family:"Playfair Display",serif;margin:13px 0 7px}.reason p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+@media(max-width:700px){.reasons{grid-template-columns:1fr}}
+
+.envelopes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.envelope{border:0;background:#fff;min-height:180px;border-radius:25px;box-shadow:0 14px 40px rgba(120,40,70,.09);cursor:pointer;position:relative;overflow:hidden;border:1px solid #ffe0e8}
+.envelope:before{content:"♥";position:absolute;font-size:100px;color:#fff1f5;right:-10px;bottom:-30px}
+.envelope span{display:block;font-size:35px;margin-bottom:10px}.envelope b{font-family:"Playfair Display",serif;font-size:20px}.envelope small{display:block;margin-top:8px;color:#a16d7c}
+@media(max-width:700px){.envelopes{grid-template-columns:1fr}}
+
+.song{background:linear-gradient(135deg,#ff6d9e,#b9366a);color:#fff;border-radius:35px;padding:45px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;overflow:hidden;position:relative;box-shadow:0 25px 60px rgba(190,45,95,.22)}
+.song:after{content:"♪";position:absolute;font-size:210px;right:30px;bottom:-80px;color:rgba(255,255,255,.08);font-family:serif}
+.song h2{margin:5px 0}.song p{color:#ffe9f0;max-width:580px;line-height:1.7}.song .btn{background:#fff;color:#a72d5b;position:relative;z-index:2}
+@media(max-width:700px){.song{grid-template-columns:1fr;padding:32px}}
+
+.surprise{text-align:center;padding-top:120px;padding-bottom:130px}
+.gift{width:105px;height:90px;margin:30px auto;position:relative;cursor:pointer;animation:bounce 1.8s ease-in-out infinite}
+.gift .box{position:absolute;left:5px;bottom:0;width:95px;height:68px;border-radius:8px;background:linear-gradient(135deg,#ff77a5,#ee3f76)}
+.gift .lid{position:absolute;left:0;top:15px;width:105px;height:23px;border-radius:8px;background:#ff5e92}
+.gift .ribbon{position:absolute;left:44px;top:14px;width:17px;height:76px;background:#ffd0dd;border-radius:4px}
+.gift .bow{position:absolute;left:33px;top:0;width:20px;height:28px;border:7px solid #ffd0dd;border-radius:50% 50% 50% 10%;transform:rotate(-25deg)}
+.gift .bow.r{left:54px;transform:scaleX(-1) rotate(-25deg)}
+@keyframes bounce{50%{transform:translateY(-8px) rotate(2deg)}}
+
+footer{text-align:center;padding:35px 20px 60px;color:#a57483;font-size:13px}
+footer strong{font-family:Caveat,cursive;color:var(--rose);font-size:24px}
+
+.modal{position:fixed;inset:0;background:rgba(45,18,28,.48);backdrop-filter:blur(8px);z-index:100;display:none;place-items:center;padding:20px}
+.modal.show{display:grid}
+.modal-card{background:#fff;border-radius:30px;padding:34px;max-width:560px;width:100%;box-shadow:0 30px 100px rgba(0,0,0,.2);position:relative;text-align:center}
+.close{position:absolute;right:15px;top:13px;border:0;background:#fff2f6;color:#b13963;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px}
+.modal-card h3{font-family:"Playfair Display",serif;font-size:31px;margin:10px 0}
+.modal-card p{color:var(--muted);line-height:1.8}
+#lightbox img{max-height:75vh;max-width:100%;object-fit:contain;border-radius:18px}
+#lightbox .modal-card{max-width:900px;padding:18px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<nav>
+  <div class="logo">Ishu ♡ Anish</div>
+  <div class="navlinks">
+    <a href="#story">Our Story</a>
+    <a href="#memories">Memories</a>
+    <a href="#reasons">Reasons</a>
+    <a href="#surprise">Surprise</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <div class="kicker">♡ a tiny corner of the internet, just for you</div>
+      <h1>Hey, <span>Pookie.</span><br>This is us. ♡</h1>
+      <p>
+        From <b>best friends</b> to something a little more magical...
+        this little website is a collection of the memories, chaos,
+        cuddles and smiles that make you <i>my favourite person.</i>
+      </p>
+      <div class="script">Happy Boyfriend Day, Motte! 💗</div>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#story">Open our story ↓</a>
+        <button class="btn btn-secondary" onclick="openLetter('hello')">💌 A little letter</button>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <img src="photos/01-us-outdoors.jpeg" alt="Ishu and Anish together">
+      <div class="sticker">best friends → lovers <small>my favourite plot twist</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="story">
+<div class="section-inner">
+  <div class="eyebrow reveal">01 · our little timeline</div>
+  <h2 class="reveal">Some dates. A lot of feelings. 💕</h2>
+  <p class="section-intro reveal">There are dates on a calendar, and then there are dates that become part of your heart. These are ours.</p>
+  <div class="stats reveal">
+    <div class="stat"><strong id="daysTogether">0</strong><span>days since 1 Feb 2026</span></div>
+    <div class="stat"><strong>∞</strong><span>inside jokes</span></div>
+    <div class="stat"><strong>1</strong><span>very cute Pookie</span></div>
+  </div>
+
+  <div class="timeline">
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card">
+      <div class="t-date">2025 · The beginning</div><h3>First, we met. 🌷</h3>
+      <p>Somewhere in 2025, two best friends met. Neither of us knew how important that little beginning would become.</p>
+    </div></div>
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card">
+      <div class="t-date">1 February 2026 · Us</div><h3>Best friends → lovers. ❤️</h3>
+      <p>The day our story officially changed. From being “just us” to being <b>our us</b>.</p>
+    </div></div>
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card">
+      <div class="t-date">3 February 2026 · Bike ride</div><h3>Our first little adventure. 🛵</h3>
+      <p>A bike ride, a million tiny moments, and the kind of memory that looks simple but feels special forever.</p>
+    </div></div>
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card">
+      <div class="t-date">Mussoorie · memories</div><h3>Mountains + you = perfect. 🏔️</h3>
+      <p>Our Mussoorie trips, the rides, the views, the photos, the food, and all those moments with Arpit Bhaiya and Anvi Didi.</p>
+    </div></div>
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card">
+      <div class="t-date">31 March · 29 April · 2 July</div><h3>Our little special dates. ✨</h3>
+      <p>Three dates that deserve their own tiny place in our story — because every important memory deserves a heart.</p>
+    </div></div>
+  </div>
+</div>
+</section>
+
+<section id="memories">
+<div class="section-inner">
+  <div class="eyebrow reveal">02 · our memories</div>
+  <h2 class="reveal">Proof that we are actually this cute. 📸</h2>
+  <p class="section-intro reveal">A few favourite frames from our little universe. Tap any photo to see it bigger.</p>
+  <div class="gallery">
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/01-us-outdoors.jpeg" alt="Together outdoors"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/08-mussoorie-us.jpeg" alt="Us in Mussoorie"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/07-bike-ride.jpeg" alt="Bike ride"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/06-mussoorie-night.jpeg" alt="Mussoorie memory"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/14-mountain.jpeg" alt="Mountain view together"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/02-cuddle.jpeg" alt="Cuddle"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/03-kiss.jpeg" alt="Cute kiss"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/04-funny-kiss.jpeg" alt="Funny kiss"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/09-heart-selfie.jpeg" alt="Heart selfie"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/10-anish-heart.jpeg" alt="Anish selfie"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/11-hoodie.jpeg" alt="Anish in hoodie"></div>
+    <div class="g reveal" onclick="lightbox(this)"><img src="photos/13-closeup.jpeg" alt="Cute closeup"></div>
+  </div>
+
+  <div class="polaroids">
+    <div class="polaroid reveal"><img src="photos/05-little-anish.jpeg" alt="Little Anish"><p>little Motte 🥹</p></div>
+    <div class="polaroid reveal"><img src="photos/07-bike-ride.jpeg" alt="Bike ride"><p>ride with my favourite 🛵</p></div>
+    <div class="polaroid reveal"><img src="photos/14-mountain.jpeg" alt="Mountain memory"><p>you + me + mountains 🏔️</p></div>
+  </div>
+</div>
+</section>
+
+<section id="reasons">
+<div class="section-inner">
+  <div class="eyebrow reveal">03 · why you</div>
+  <h2 class="reveal">A few reasons I love you. ♡</h2>
+  <p class="section-intro reveal">I could make this list 500 pages long, but your Bhondu has places to be. 😂</p>
+  <div class="reasons">
+    <div class="reason reveal"><div class="emoji">🥹</div><h3>You feel like home.</h3><p>Even the most ordinary moments become my favourite when you're there.</p></div>
+    <div class="reason reveal"><div class="emoji">😂</div><h3>Your stupid little jokes.</h3><p>Annoying? Yes. Do I secretly love them? Also yes.</p></div>
+    <div class="reason reveal"><div class="emoji">🫶</div><h3>My best friend.</h3><p>The best part of loving you is that underneath everything, you're still my person to laugh with.</p></div>
+    <div class="reason reveal"><div class="emoji">🏔️</div><h3>Our adventures.</h3><p>Give us a bike, a road, some food and a mountain view — apparently that's all we need.</p></div>
+    <div class="reason reveal"><div class="emoji">🍜</div><h3>Food dates.</h3><p>Because apparently every serious conversation is better after we've eaten something yummy.</p></div>
+    <div class="reason reveal"><div class="emoji">❤️</div><h3>Simply… you.</h3><p>No grand reason. No complicated explanation. Just you, Pookie. That's enough.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="section-inner">
+  <div class="eyebrow reveal">04 · open when...</div>
+  <h2 class="reveal">Tiny letters for my Pookie 💌</h2>
+  <p class="section-intro reveal">Click one. I wrote these for the moments when I can't be right there beside you.</p>
+  <div class="envelopes">
+    <button class="envelope reveal" onclick="openLetter('miss')"><span>💗</span><b>Open when you miss me</b><small>just a tiny reminder...</small></button>
+    <button class="envelope reveal" onclick="openLetter('sad')"><span>🥺</span><b>Open when you're sad</b><small>your Bhondu has something to say</small></button>
+    <button class="envelope reveal" onclick="openLetter('smile')"><span>😂</span><b>Open when you need a smile</b><small>warning: cringe ahead</small></button>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="section-inner">
+  <div class="song reveal">
+    <div>
+      <div class="eyebrow" style="color:#ffe4ed">05 · our song</div>
+      <h2>Hona Tha Pyaar 🎵</h2>
+      <p>Because some songs just feel like a memory. Whenever this one plays, I want it to remind you of us — our little adventures, our silly moments, and everything still waiting for us.</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Hona+Tha+Pyaar+Atif+Aslam">▶ Play our song</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="surprise" class="surprise">
+<div class="section-inner">
+  <div class="eyebrow reveal">06 · one last thing</div>
+  <h2 class="reveal">There's a little surprise for you… 🎁</h2>
+  <p class="section-intro reveal" style="margin:auto">Pookie, you've reached the end. But you know me… I wasn't going to let you leave without one last message.</p>
+  <div class="gift reveal" onclick="openLetter('final')" aria-label="Open surprise">
+    <div class="bow"></div><div class="bow r"></div><div class="lid"></div><div class="box"></div><div class="ribbon"></div>
+  </div>
+  <div class="script reveal">click the gift, Motte ♡</div>
+</div>
+</section>
+
+<footer>
+  Made with too much love, a little chaos & lots of hearts.<br>
+  <strong>Ishu ♡ Anish</strong><br>
+  <span>best friends → lovers → whatever beautiful thing comes next.</span>
+</footer>
+
+<div class="modal" id="letterModal">
+  <div class="modal-card">
+    <button class="close" onclick="closeModal()">×</button>
+    <div id="letterEmoji" style="font-size:42px">💌</div>
+    <h3 id="letterTitle">A little letter</h3>
+    <p id="letterText"></p>
+  </div>
+</div>
+
+<div class="modal" id="lightbox">
+  <div class="modal-card">
+    <button class="close" onclick="closeLightbox()">×</button>
+    <img id="lightboxImg" src="" alt="Memory">
+  </div>
+</div>
+
+<script>
+const letters = {
+  hello:{
+    emoji:"💌", title:"Dear Pookie…",
+    text:"I made this little corner of the internet just for you because sometimes a normal message doesn't feel big enough. Thank you for being my best friend, my Motte, my favourite person to annoy, and the person I want beside me for all the tiny adventures ahead. Happy Boyfriend Day. ❤️"
+  },
+  miss:{
+    emoji:"💗", title:"If you miss your Bhondu…",
+    text:"Come here 🥺. Imagine I'm giving you the biggest hug right now. Remember our bike rides, our food dates, our Mussoorie memories and all the completely random moments that somehow became special. Distance or bad days don't change the fact that you're my person. Now smile. That's an order. ❤️"
+  },
+  sad:{
+    emoji:"🥺", title:"Hey Motte, listen.",
+    text:"Whatever is bothering you right now, you don't have to carry it all alone. Take a breath. Drink some water. Rest. And remember that your Bhondu is always somewhere cheering for you. One bad day cannot decide your whole story. You are loved. A lot. 🫶"
+  },
+  smile:{
+    emoji:"😂", title:"Emergency smile department!",
+    text:"HELLO MOTTE. This is your official reminder that your girlfriend thinks you're extremely cute. Unfortunately, she also thinks you're extremely annoying. So congratulations: you have successfully achieved both. 😂❤️ Now stop being serious and give me that smile."
+  },
+  final:{
+    emoji:"🎁", title:"My favourite person ❤️",
+    text:"From meeting in 2025, to becoming best friends, to 1 February 2026, to bike rides, Mussoorie, food dates, Living M with Arpit Bhaiya and Anvi Didi, and all the silly little moments in between — I wouldn't trade our story for anything. I don't know every chapter that's coming next, but I know I want more memories with you. Happy Boyfriend Day, Pookie. Love, your Bhondu. ❤️"
+  }
+};
+
+function openLetter(key){
+  const l=letters[key];
+  document.getElementById("letterEmoji").textContent=l.emoji;
+  document.getElementById("letterTitle").textContent=l.title;
+  document.getElementById("letterText").textContent=l.text;
+  document.getElementById("letterModal").classList.add("show");
+  burstHearts(16);
+}
+function closeModal(){document.getElementById("letterModal").classList.remove("show")}
+function lightbox(el){
+  document.getElementById("lightboxImg").src=el.querySelector("img").src;
+  document.getElementById("lightbox").classList.add("show");
+}
+function closeLightbox(){document.getElementById("lightbox").classList.remove("show")}
+window.addEventListener("click",e=>{
+  if(e.target.classList.contains("modal")){e.target.classList.remove("show")}
+});
+
+const start = new Date("2026-02-01T00:00:00");
+function updateDays(){
+  const now=new Date();
+  const days=Math.max(0,Math.floor((now-start)/86400000));
+  document.getElementById("daysTogether").textContent=days;
+}
+updateDays();
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")});
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>observer.observe(x));
+
+function burstHearts(n=8){
+  const box=document.getElementById("hearts");
+  for(let i=0;i<n;i++){
+    const h=document.createElement("div");
+    h.className="heart"; h.textContent=["♥","♡","💕","💗","💖"][Math.floor(Math.random()*5)];
+    h.style.left=(15+Math.random()*70)+"%";
+    h.style.fontSize=(14+Math.random()*24)+"px";
+    h.style.animationDuration=(2.5+Math.random()*2.5)+"s";
+    box.appendChild(h); setTimeout(()=>h.remove(),5500);
+  }
+}
+setInterval(()=>burstHearts(1),1700);
+document.addEventListener("click",()=>burstHearts(2),{passive:true});
+</script>
+</body>
+</html>
